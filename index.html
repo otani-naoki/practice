@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>A-RESORT</title>
+  <meta name="description" content="フロントエンド練習">
+  <link rel="stylesheet" href="style.css">
+  <link href = " https://unpkg.com/sanitize.css " rel = " stylesheet " />
+
+  <!--Viewport設定（モバイル端末でもWebブラウザでもページが等倍）------>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+</head>
+
+
+<!--■ 画面に映るところ（ここから）■----------------------------------------------------------------------------------------------------------------------->
+<body>
+
+  <!--ヘッダー（ここから）----------------------------------------------------------------------------------------------------------------------->
+  <header>
+ 
+  
+      <div class="header-contents">
+         <img class="header-contents-image" src="images/logo.png" alt="ヘッダー左画像" style="width:20vw; height:6vw">
+
+           <nav class="header-contents-nav"> 
+             <ul class="header-contents-navList">
+                <li class="header-contents-navList1"><a href="#main-middle1">施設</a></li>    <!--ページ内リンク先の属性は★「id」★で指定する-->
+                <li class="header-contents-navList2"><a href="#main-middle2">体験</a></li>
+                <li class="header-contents-navList3"><a href="#main-middle3">特集</a></li>
+                <li class="header-contents-navList4"><a href="#main-middle4">お知らせ</a></li>
+                <button class="header-contents-navList5">空室検索</button>  <!--モーダルボタンを開く--->
+             </ul>
+           </nav>
+
+           <div class="over-lay"></div>
+              
+               <div class="modal">
+                <h3>空室検索</h3>
+               <div>
+                 <p>目的地・ホテル名</p>
+                 <input type=”text” name="destination-date">
+               </div>
+               <div>
+                 <p>チェックイン</p>
+                <input type="date" name="checkIn-date">
+                </div>
+               <div>
+                 <p>チェックアウト</p>
+                 <input type="date" name="checkOut-date" >
+               </div>
+               <div>
+                 <p>宿泊人数</p>
+                 <input type=”text” name="amount-text"  >
+               </div>
+               <button class="modal-close-btn">調べる</button>
+               </div>
+          </div>
+
+  </header>
+  <!--ヘッダー（ここまで）----------------------------------------------------------------------------------------------------------------------->
+
+
+  <!--メイン（ここから）------------------------------------------------------------------------------------------------------------------------->
+  <main>
+      <div class="main-upper">   <!--メイン上部-->
+         <img src="images/top.jpeg" alt="メイン上部背景画像" style="width:100vw; height:50vw">  <!--【補足】vw: 画面サイズに対する比率-->
+         <p>Take memories,<br>leave footprints.</p>
+      </div>
+
+
+      <div id="main-middle1"> <!--メイン中部１-->
+          <div class="main-middle1-head">
+             <h4>リゾート施設</h4>
+          </div>
+
+          <div class="main-middle1-blockLine1">
+
+             <div class="main-middle1-block1">
+                <img src="images/pic1.jpeg" alt="メイン中部１ブロック１" style="width:17.5vw; height:17.5vw">
+                <h5>北海道</h5>
+                <h4>洞爺湖リゾート</h4>
+             </div>
+
+             <div class="main-middle1-block2">
+               <img src="images/pic2.jpeg" alt="メイン中部１ブロック２" style="width:17.5vw; height:17.5vw">
+               <h5>千葉</h5>
+               <h4>舞浜リゾート</h4>
+             </div>
+ 
+             <div class="main-middle1-block3">
+               <img src="images/pic3.jpeg" alt="メイン中部１ブロック３" style="width:17.5vw; height:17.5vw">
+               <h5>神奈川</h5>
+               <h4>湘南リゾート</h4>
+             </div>
+
+             <div class="main-middle1-block4">
+               <img src="images/pic4.jpeg" alt="メイン中部１ブロック４" style="width:17.5vw; height:17.5vw">
+               <h5>静岡</h5>
+               <h4>白浜リゾート</h4>
+             </div>
+  
+          </div>
+
+          <div class="main-middle1-blockLine2">
+
+             <div class="main-middle1-block5">
+               <img src="images/pic5.jpeg" alt="メイン中部１ブロック５" style="width:17.5vw; height:17.5vw">
+               <h5>岐阜</h5>
+               <h4>高山リゾート</h4>
+            </div>
+
+             <div class="main-middle1-block6">
+               <img src="images/pic6.jpeg" alt="メイン中部１ブロック６" style="width:17.5vw; height:17.5vw">
+               <h5>鹿児島</h5>
+               <h4>屋久島ゾート</h4>
+             </div>
+
+             <div class="main-middle1-block7">
+               <img src="images/pic7.jpeg" alt="メイン中部１ブロック７" style="width:17.5vw; height:17.5vw">
+               <h5>沖縄</h5>
+               <h4>石垣ゾート</h4>
+             </div>
+
+          </div>
+      </div>
+
+
+      <div id="main-middle2"> <!--メイン中部２-->
+         <div class="main-middle2-head">
+            <h4>おすすめの体験</h4>
+         </div>
+
+         <div class="main-middle2-blockLine1">
+             <div class="main-middle2-blockGroup1">
+                  <img src="images/grid1.png" alt="メイン中部２グループ１" style="width:45vw; height:45vw">
+                  <p>RESORT WEDDING</p>
+             </div>
+
+             <div class="main-middle2-blockGroup2">
+                <div class="main-middle2-blockGroup2-block1">
+                   <img src="images/grid2.png" alt="メイン中部２グループ２ブロック１" style="width:32.25vw; height:21.75vw">
+                   <p>ACTIVITIES</p>
+                </div>
+                <div class="main-middle2-blockGroup2-block2">
+                  <img src="images/grid3.png" alt="メイン中部２グループ２ブロック２" style="width:32.25vw; height:21.75vw">
+                  <p>RELAXATION</p>
+                </div>                         
+             </div>
+        </div>
+
+         <div class="main-middle2-blockGroup3">
+          <div class="main-middle2-blockGroup3-block1">
+             <img src="images/grid4.png" alt="メイン中部２グループ３ブロック１" style="width:30vw; height:25vw">
+             <p>UP COMING EVENT</p>
+          </div>
+          <div class="main-middle2-blockGroup3-block2">
+            <img src="images/grid5.png" alt="メイン中部２グループ３ブロック２" style="width:47.25vw; height:25vw">
+            <p>10.15 GRAND OPEN</p>
+          </div>                         
+       </div>       
+       
+       <div class="main-middle2-button">
+            <button style="width:20vw; height:4vw">一覧へ　　></button>
+       </div>
+
+    </div>
+
+    <div id="main-middle3"> <!--メイン中部3-->
+       <div class="main-middle3-head">
+           <h4>旅の提案</h4>
+           <img src="images/hayawari.png" alt="メイン中部３画像" style="width:70vw; height:25vw" class="fadeOut">
+       </div>
+
+       <div class="main-middle3-button">
+            <button style="width:20vw; height:4vw">一覧　　></button>
+       </div>
+
+    </div>
+
+    <div id="main-middle4"> <!--メイン中部4-->
+       <div class="main-middle4-head">
+           <h4>おしらせ</h4>
+       </div>
+       <div class="main-middle4-block1">
+           <img src="images/logo.png" alt="メイン中部４画像１" style="width:24vw; height:8vw">
+           <div class="main-middle4-block1-sentence">
+              <h4>トピックス</h4>
+              <p>2022年03月25日<br>【石垣リゾート】29歳以下限定 開業前特別プラン<br>予約受付開始</p>
+           </div>
+       </div>
+       <div class="main-middle4-block2">
+           <img src="images/logo.png" alt="メイン中部４画像２" style="width:24vw; height:8vw">
+           <div class="main-middle4-block2-sentence">
+              <h4>トピックス</h4>
+              <p>2022年03月19日<br>【湘南リゾート】開放感のあるプールサイドでビー<br>ルを楽しむ「ビアフェス」開催</p>
+           </div>
+       </div>
+       <div class="main-middle4-block3">
+           <img src="images/logo.png" alt="メイン中部４画像３" style="width:24vw; height:8vw">
+           <div class="main-middle4-block3-sentence">
+              <h4>トピックス</h4>
+              <p>2022年03月07日<br>【屋久島リゾート】春の訪れを祝う「春咲かまつ<br>り」開催 | 期間2022年3月3日-2022年3月21日</p>
+           </div>
+       </div>
+       <div class="main-middle4-button">
+           <button style="width:20vw; height:4vw">一覧　　></button>
+       </div>
+
+    </div>
+
+  </main>
+
+<!--メイン（ここまで）----------------------------------------------------------------------------------------------------------------------------------->
+
+<!--フッター（ここから）--------------------------------------------------------------------------------------------------------------------------------->
+
+  <footer style="width:100vw; height:30vw">
+     <div class="footer-sns">
+        <div>
+            <img src="images/twitter.png" alt="SNSロゴ" style="width:2vw; height:2vw">
+        </div>
+        <div>
+           <img src="images/instagram.png" alt="SNSロゴ" style="width:2vw; height:2vw">
+        </div>
+        <div>
+           <img src="images/facebook.png" alt="SNSロゴ" style="width:2vw; height:2vw">
+        </div>
+     </div>
+
+     <div class="footer-sentence-group">
+
+       <div class="footer-sentence1">
+          <p>《九州》</p>
+          <p>屋久島リゾート<br>石垣リゾート</p>
+       </div>
+
+       <div class="footer-sentence2">
+          <p>《関東》</p>
+          <p>横浜リゾート<br>湘南リゾート<br>白浜リゾート</p>
+       </div>
+ 
+       <div class="footer-sentence3">
+          <p>《中部》</p>
+          <p>高山リゾート</p>
+       </div>
+
+       <div class="footer-sentence4">
+          <p>《北海道》</p>
+          <p>洞爺湖リゾート</p>
+       </div>
+      
+      </div>
+      
+      <!--フッターの縦線-->
+      <div id="footer-line">
+        <div id="footer-line1"></div>
+        <div id="footer-line2"></div>
+        <div id="footer-line3"></div>
+        <div id="footer-line4"></div>
+      </div>
+
+      <!--右下ボタン-->
+      <p class="button"><a href="#">TOPへ戻る</a></p>
+
+ </footer>
+
+
+
+<!--フッター（ここまで）--------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+ <!--■ 画面に映るところ（ここまで）■---------------------------------------------------------------------------------------------------------------------->
+
+     <!--★jQueryライブラリをダウンロードせず読み込み★---------------------------------------------->
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+     <!--★HTMLファイル内でJavaScriptファイルを読み込む★-------------------------------------------->
+         <script src="script.js"></script> 
+
+</body>
+
+
+</html>

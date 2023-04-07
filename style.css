@@ -1,0 +1,670 @@
+@charset "utf-8";   /*★コードの⽂字化けを防止(CSSの先頭に必ず書く)★*/
+
+
+
+body {
+    width:100vw;
+    }                     /*　← サイトの幅*/
+
+
+/*--ヘッダー（ここから）------------------------------------------------------------------------------------------------------------------*/
+
+
+.header-contents {
+    display:flex;/* ← 子要素を横並びにする */
+    z-index: 30;
+    justify-content: space-between; /* ← 各アイテムを均等に配置し最初のアイテムは先頭に寄せ、最後のアイテムは末尾に寄せる */
+    background-color: rgba(3, 3, 3, 0);
+    position:fixed;  /* ← ヘッダーのボックスを固定（自然に背景画像の上部に乗った） */
+    width:100vw;   /* ← 固定すると幅が小さくなったので、bodyのサイズ設定に合わせた */
+    height:6.5vw;
+    } 
+
+                          /*《Script対応》：スクロール時の色の変化*/
+                           .header-backGround-active{
+                           background-color: rgba(3, 3, 3, 0.7) ;
+                           }
+                           
+.header-contents-nav{
+    margin:0vw 0vw 0vw 0vw;
+    }
+
+.header-contents-navList { 
+    display:flex;
+    margin:1.75vw 0vw 0vw 0vw;  /* ←nav群をまとめてサイトサイズに合わせた幅調整*/
+    }
+    
+    /*--ヘッダー要素設定--------------------------------------------------------------------------------*/
+         .header-contents img{
+             margin-left:1.5vw;
+             margin-top:0.25vw;
+             }
+
+         .header-contents-navList {
+             margin-right:5vw; /* ←nav群をまとめて右から20pxの空間*/
+             }
+  
+         .header-contents-navList li{
+             margin-right:5vw;  /* ←nav群内のli要素それぞれを右から50pxの空間*/
+             padding-top:0.5vw;
+             }
+
+         .header-contents-navList a{
+             text-decoration: none; /* ←リンクの下線削除（注意：a に指定入れないと機能しない）*/
+             color:white;
+             font-size:1.5vw;
+             }
+
+                a.anchor{
+                display: block;
+                padding-top: 7vw;
+                margin-top: -7vw;
+                }
+        
+         .header-contents-navList5{
+             border:solid 0.1vw white;
+             border-radius: 0.7vw;  /* ←ボックスの角を丸く*/
+             padding:0.5vw 3vw 0.5vw 3vw;  /* ←上部の空白は「.header-contents-navList li」でまとめて5px*/
+             margin:-0.5vw 2vw 0vw 0vw;  /* ←nav群内のli要素それぞれを右から50pxの空間*/
+             color:white;
+             background-color:rgb(255, 255, 255, 0);
+             font-size:1.5vw;
+             width:13vw; 
+             height:4vw;
+             }
+
+
+/*--ヘッダー（ここまで）------------------------------------------------------------------------------------------------------------------*/
+
+
+/*--メイン（ここから）--------------------------------------------------------------------------------------------------------------------*/
+
+/*--メイン上部----------------------*/
+.main-upper p{
+    position:absolute;
+    top:20vw;
+    left:3vw;
+    font-family:"Modern";
+    font-size:5vw;
+    color:white;
+    }
+
+
+/*--メイン中部１-----------------------------------------*/
+.main-middle1-head {
+    text-align:center;
+    margin:8vw 0vw 0vw 0vw;
+    }
+
+.main-middle1-head h4{
+   font-size:2vw ;
+}
+
+      .main-middle1-blockLine1{
+         display: flex;
+         justify-content:center;
+         }
+
+              .main-middle1-blockLine1 img,h5,h4 {
+                  border-radius: 0.7vw;
+                  margin:1vw 1.5vw 1vw 1.5vw;
+                  }
+
+              .main-middle1-blockLine1 h5 {
+                  font-size: 1vw;
+                  margin:-0.5vw 1.5vw -1vw 1.5vw;
+                  }
+
+              .main-middle1-blockLine1 h4 {
+                  font-size: 1.5vw;
+                  }
+            
+
+      .main-middle1-blockLine2{
+         display: flex;
+         justify-content:center;
+         margin:0vw 20.5vw 0vw 0vw;
+         }
+ 
+              .main-middle1-blockLine2 img,h5,h4 {
+                  border-radius: 0.7vw;
+                  margin:1vw 1.5vw 1vw 1.5vw;
+                  }
+
+              .main-middle1-blockLine2 h5 {
+                  font-size: 1vw;
+                  margin:-0.5vw 1.5vw -1vw 1.5vw;
+                  }
+
+              .main-middle1-blockLine2 h4 {
+                  font-size: 1.5vw;
+                  }
+
+/*--メイン中部２-----------------------------------------*/
+.main-middle2-head{
+    text-align:center;
+    margin:8vw 0vw 2vw 0vw;
+    }
+
+.main-middle2-head h4{
+    font-size:2vw;
+    }
+
+     .main-middle2-blockLine1{
+         display: flex;
+         justify-content:center;
+         }
+
+
+            .main-middle2-blockGroup1 img{
+                margin:0vw 0vw 0vw 0vw;
+                }
+
+                .main-middle2-blockGroup1 p{
+                    color:white;
+                    font-size:2.5vw;
+                    position:absolute; 
+                    margin:-6.5vw 0vw 0vw 3.5vw;
+                    }
+
+                     /*--ANIMATION - メイン中部２画像１：画面固定ズーム（ここから）----------------------------------------------*/
+
+
+                      .main-middle2-blockGroup1 {
+                          overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+	                      width:45vw; 	/*画像の幅*/
+	                      height:45vw;	/*画像の高さ*/
+                          } 
+
+                       .main-middle2-blockGroup1 img {
+                          display: block;
+                          z-index: 20; /*ヘッダー（z-index: 30;）より背面にする*/
+                          transition-duration: 1.5s;	/*変化に掛かる時間*/
+                          }   
+
+                       .main-middle2-blockGroup1 img:hover{
+                          transform: scale(1.1);	/*画像の拡大率*/
+                          transition-duration: 1.5s;	/*変化に掛かる時間*/
+                          }
+
+                            
+                    /*--ANIMATION - メイン中部２画像１：画面固定ズーム（ここまで）----------------------------------------------*/
+        
+ 
+
+                .main-middle2-blockGroup2-block1 img{
+                    margin:0vw 0vw 0vw 0vw;
+                    }
+
+                .main-middle2-blockGroup2-block1 p{
+                    color:white;
+                    font-size:2.5vw;
+                    position:absolute; 
+                    margin:-6.5vw 0vw 0vw 4.5vw;
+                    }
+
+                     /*--ANIMATION - メイン中部２画像２：画面固定ズーム（ここから）----------------------------------------------*/
+                    
+                      .main-middle2-blockGroup2-block1{
+                         overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+                         width:32.25vw; 	/*画像の幅*/
+                         height:21.75vw;	/*画像の高さ*/
+                         margin: 0vw 0vw 1.5vw 1.5vw;
+                         } 
+
+                      .main-middle2-blockGroup2-block1 img {
+                         display: block;
+                         z-index: 20; /*ヘッダー（z-index: 30;）より背面にする*/
+                         transition-duration: 1.5s;	/*変化に掛かる時間*/
+                         }   
+
+                      .main-middle2-blockGroup2-block1 img:hover{
+                         transform: scale(1.1);	/*画像の拡大率*/
+                         transition-duration: 1.5s;	/*変化に掛かる時間*/                        
+                         }
+
+                    /*--ANIMATION - メイン中部２画像２：画面固定ズーム（ここまで）----------------------------------------------*/
+
+    
+                .main-middle2-blockGroup2-block2 img{
+                    margin:0vw 0vw 0vw 0vw;
+                    }
+
+                .main-middle2-blockGroup2-block2 p{
+                    color:white;
+                    font-size:2.5vw;
+                    position:absolute; 
+                    margin:-6.5vw 0vw 0vw 4.5vw;
+                    }
+
+                    /*--ANIMATION - メイン中部２画像２：画面固定ズーム（ここから）----------------------------------------------*/
+                    
+                    .main-middle2-blockGroup2-block2{
+                        overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+                        width:32.25vw; 	/*画像の幅*/
+                        height:21.75vw;	/*画像の高さ*/
+                        margin:1vw 0vw 0vw 1.5vw;
+                        } 
+
+                     .main-middle2-blockGroup2-block2 img {
+                        display: block;
+                        z-index: 20; /*ヘッダー（z-index: 30;）より背面にする*/
+                        transition-duration: 1.5s;	/*変化に掛かる時間*/
+                        }   
+
+                     .main-middle2-blockGroup2-block2 img:hover{
+                        transform: scale(1.1);	/*画像の拡大率*/
+                        transition-duration: 1.5s;	/*変化に掛かる時間*/                        
+                        }
+
+                   /*--ANIMATION - メイン中部２画像２：画面固定ズーム（ここまで）----------------------------------------------*/
+
+     .main-middle2-blockGroup3{
+         display: flex;
+         justify-content:center;
+         }
+
+            .main-middle2-blockGroup3-block1 img{
+                 margin:0vw 0vw 0vw 0vw;
+                 }
+                
+             .main-middle2-blockGroup3-block1 p{
+                color:white;
+                font-size:2.5vw;
+                 position:absolute; 
+                 margin:-6.5vw 0vw 0vw 3vw;
+                }
+
+                   /*--ANIMATION - メイン中部２画像３：画面固定ズーム（ここから）----------------------------------------------*/
+                    
+                   .main-middle2-blockGroup3-block1{
+                    overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+                    width:30vw; 	/*画像の幅*/
+                    height:25vw;	/*画像の高さ*/
+                    margin: 1.5vw 0vw 0vw 0.5vw;
+                    } 
+
+                 .main-middle2-blockGroup3-block1 img {
+                    display: block;
+                    z-index: 20; /*ヘッダー（z-index: 30;）より背面にする*/
+                    transition-duration: 1.5s;	/*変化に掛かる時間*/
+                    }   
+
+                 .main-middle2-blockGroup3-block1 img:hover{
+                    transform: scale(1.1);	/*画像の拡大率*/
+                    transition-duration: 1.5s;	/*変化に掛かる時間*/                        
+                    }
+
+                 /*--ANIMATION - メイン中部２画像３：画面固定ズーム（ここまで）----------------------------------------------*/
+
+            .main-middle2-blockGroup3-block2 img{
+                 margin:0vw 0vw 0vw 0vw;
+                   }
+                
+             .main-middle2-blockGroup3-block2 p{
+                 color:white;
+                 font-size:2.5vw;
+                 position:absolute; 
+                 margin:-6.5vw 0vw 0vw 4.5vw;
+                 }
+
+                 /*--ANIMATION - メイン中部２画像３：画面固定ズーム（ここから）----------------------------------------------*/
+                    
+                 .main-middle2-blockGroup3-block2{
+                    overflow: hidden;	/*拡大時にはみ出た部分を隠す*/
+                    width:47.25vw; 	/*画像の幅*/
+                    height:25vw;	/*画像の高さ*/
+                    margin: 1.5vw 0vw 0vw 1.5vw;
+                    } 
+
+                 .main-middle2-blockGroup3-block2 img {
+                    display: block;
+                    z-index: 20; /*ヘッダー（z-index: 30;）より背面にする*/
+                    transition-duration: 1.5s;	/*変化に掛かる時間*/
+                    }   
+
+                 .main-middle2-blockGroup3-block2 img:hover{
+                    transform: scale(1.1);	/*画像の拡大率*/
+                    transition-duration: 1.5s;	/*変化に掛かる時間*/                        
+                    }
+
+                 /*--ANIMATION - メイン中部２画像３：画面固定ズーム（ここまで）----------------------------------------------*/
+
+
+
+.main-middle2-button{
+    text-align: center;
+    margin:5vw 0vw 0vw 0vw;
+    font-size:bold;
+    }
+
+    .main-middle2-button button{
+       border:solid 0.1vw rgb(91, 181, 173);
+       background-color: white;
+       box-shadow: 0 0.2vw 0.4vw gray;  /*ボックスに影をつけて厚みを出す*/
+       }
+    
+
+/*--メイン中部３-----------------------------------------*/
+
+#main-middle3 {
+    text-align:center;
+    margin:8vw 0vw 0vw 0vw;
+    }
+
+    .main-middle3-head{
+        margin:0vw 0vw -1vw 0vw;
+        font-size:2vw;
+        }
+
+    .main-middle3-button{
+        text-align: center;
+        margin:5vw 0vw 0vw 0vw;
+        font-size:bold;
+        }
+
+        .main-middle3-button button{
+            border:solid 0.1vw rgb(91, 181, 173);
+            background-color: white;
+            box-shadow: 0 0.2vw 0.4vw gray;  /*ボックスに影をつけて厚みを出す*/
+            }
+
+               /*《Script対応用》：スクロール時のフェードイン*/
+
+                .fadeOut{
+                   opacity:0;
+                   -webkit-transition:all 3s;
+                   -moz-transition:all 3s;
+                   -o-transition:all 3s;
+                   -ms-transition:all 3s;
+                   
+                   transition:all 3s;
+                    }
+
+                      /*《Script対応用》：スクロール時のフェードアウト*/
+                      .fadeIn-down{
+                         transform: translateY(-1vw);   /*下からふわっと*/
+                         opacity:1;
+                         }
+
+                         .main-middle3-head img{
+                            margin:1vw 0vw 0vw 0vw;  /*下からふわっと来る分を事前に下げておく*/
+                            }
+
+
+/*--メイン中部４-----------------------------------------*/
+
+.main-middle4-head{
+    text-align:center;
+    margin:8vw 0vw 0vw 0vw;
+    font-size:2vw;
+    }
+
+    .main-middle4-block1 {
+        display: flex;
+        background-color:rgb(232, 232, 232);
+        justify-content:center;
+        margin:2vw 15vw 0vw 15vw; 
+        }
+
+          .main-middle4-block1 img{
+              margin:2vw 2vw 2vw -2vw; 
+              }
+          .main-middle4-block1 h4,p{
+              font-size:small;
+              }
+
+          .main-middle4-block1 h4{
+              margin:2.5vw 0vw 0vw 0vw;
+              }
+   
+          .main-middle4-block1 p{
+              margin:0vw 0vw 0vw 0vw;
+              }
+
+    .main-middle4-block2 {
+        display: flex;
+        background-color:rgb(232, 232, 232);
+        justify-content:center;
+        margin:2vw 15vw 0vw 15vw; 
+        }
+
+         .main-middle4-block2 img{
+             margin:2vw 2vw 2vw -2vw; 
+             }
+        
+         .main-middle4-block2 h4,p{
+             font-size:small;
+             }
+
+         .main-middle4-block2 h4{
+             margin:2.5vw 0vw 0vw 0vw;
+             }
+     
+         .main-middle4-block2 p{
+             margin:0vw 0vw 0vw 0vw;
+             }
+
+
+    .main-middle4-block3 {
+        display: flex;
+        background-color:rgb(232, 232, 232);
+        justify-content:center;
+        margin:2vw 15vw 0vw 15vw; 
+        }
+
+         .main-middle4-block3 img{
+             margin:2vw 2vw 2vw -2vw; 
+             }
+
+         .main-middle4-block3 h4,p{
+             font-size:small;
+             }
+
+         .main-middle4-block3 h4{
+             margin:2.5vw 0vw 0vw 0vw;
+             }
+        
+         .main-middle4-block3 p{
+             margin:0vw 0vw 0vw 0vw;
+             }
+
+.main-middle4-button{
+    text-align: center;
+    margin:5vw 0vw 0vw 0vw;
+    font-size:1vw;
+    }
+
+    .main-middle4-button button{
+        border:solid 0.1vw rgb(91, 181, 173);
+        background-color: white;
+        box-shadow: 0 0.2vw 0.4vw gray;  /*ボックスに影をつけて厚みを出す*/
+        }
+
+/*--フッター-----------------------------------------*/
+
+footer {
+    margin: 10vw 0vw 0vw 0vw;
+    background-color:rgb(232, 232, 232) ; 
+    }
+
+.footer-sns {
+    display: flex;
+    justify-content:center;
+    }
+
+.footer-sns img{
+    margin:3vw 0.5vw 0.5vw 1vw;
+    }
+
+.footer-sentence-group {
+    display: flex;
+    justify-content:center;
+    margin:1vw 0vw 0vw 0vw;
+    }    
+
+    .footer-sentence1 p{
+        font-size:1.3vw;
+        margin:2vw 4vw 0.5vw 4vw;
+        }
+
+    .footer-sentence2 p{
+        font-size:1.3vw;
+        margin:2vw 4vw 0.5vw 4vw;
+        }
+
+    .footer-sentence3 p{
+        font-size:1.3vw;
+        margin:2vw 4vw 0.5vw 4vw;
+        }
+
+    .footer-sentence4 p{
+        font-size:1.3vw;
+        margin:2vw 4vw 0.5vw 4vw;
+        }
+    
+    
+          /*----フッターの縦線（ここから）----------------------------------------------*/
+            #footer-line1 {
+                border-right: solid 0.25vw rgb(47, 150, 133);
+                height:16vw;
+                margin:-11vw 0vw 0vw 33.5vw;
+                position: absolute;
+                }
+
+            #footer-line2 {
+                border-right: solid 0.25vw rgb(47, 150, 133);
+                height:16vw;
+                margin:-11vw 0vw 0vw 50vw;
+                position: absolute;
+                }
+
+            #footer-line3 {
+                border-right: solid 0.25vw rgb(47, 150, 133);
+                height:16vw;
+                margin:-11vw 0vw 0vw 66.5vw;
+                position: absolute;
+                }
+         /*----フッターの縦線（ここまで）----------------------------------------------*/
+
+
+         /*----右下のTOPへ戻るボタン（ここから）----------------------------------------------*/
+          .button{
+              position:fixed;
+              right: 0;
+              bottom: 0;
+              font-size: 1vw;
+              background-color:black ;
+              padding: 1.5vw 1.5vw 1.5vw 1.5vw;
+              cursor: pointer;
+              transition: all 0.3s;
+           /*デフォルトで非表示にする*/
+              opacity: 0;
+              visibility: hidden;
+              }
+
+           /*このクラスが付与されると表示する*/
+          .active{
+             opacity: 1;
+             visibility: visible;
+             }
+
+       
+            .button a{
+                color:white;
+                text-decoration: none;
+                }
+         /*----右下のTOPへ戻るボタン（ここまで）----------------------------------------------*/
+
+          
+          html {scroll-behavior: smooth;}  /*ページ内リンクがゆっくりスクロールして移動するようになる*/
+          html, body {scroll-padding-top: 9vw}  /*ページ内リンクの際、移動先の上部の空白を作成*/
+
+
+
+
+
+
+
+
+
+
+
+/*----モーダル（ここから）----------------------------------------------------------------------------------------------------------------*/
+
+          * {
+            box-sizing: border-box;
+          }
+          /* モーダルを開いた時の外側のレイヤー */
+          .over-lay {
+            content: '';
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /*モーダルを開いたときの背景高さ*/
+            height: 100vw; /*モーダルを開いたときの背景高さ*/
+            opacity: 0.7;
+            background-color:rgb(9, 9, 9, 0.8);
+          }
+          
+          .wrapper {
+            max-width: 400px;
+            margin: 0 auto;
+          }
+        
+          /* モーダルウィンドウ */
+          .modal {
+            display: none;
+            position: absolute;
+            top: 28vw;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40vw;
+            height: 50vw;
+            background-color: #fff;
+            border-radius: 1vw; /*ボックスの角を丸くする*/
+            box-shadow: 0 0 0.8vw gray;  /*ボックスに影をつけて厚みを出す*/
+            }
+        
+            .modal h3{
+                text-align: center;
+                font-size:2vw;
+                margin:2.5vw 0vw 0vw 0vw;
+                }
+        
+                .modal p{
+                    font-size:1.5vw;
+                    margin:2.5vw 0vw 0vw 2vw;
+                    }
+        
+                .modal input{
+                    width:36vw;
+                    height:3.25vw;
+                    border-radius: 1.1vw;
+                    margin:0.5vw 0vw 0vw 2vw;
+                    border:solid 0.1vw;
+                    color: #999;
+                    }
+        
+                .modal-close-btn{
+                    width:36vw;
+                    height:4vw;
+                    font-size:1.5vw;
+                    color: white;
+                    background-color:rgb(91, 181, 173);
+                    border:none;
+                    justify-content: center;
+                    margin:3vw 0vw 0vw 2vw;
+                    box-shadow: 0 0.2vw 0.4vw gray;  /*ボックスに影をつけて厚みを出す*/
+                    }
+        
+        
+        
+          /* モーダルを開いたとき */
+          .modal.active,
+          .over-lay.active {
+            display: block;
+            }
+
+/*----モーダル（ここまで）----------------------------------------------------------------------------------------------------------------*/
